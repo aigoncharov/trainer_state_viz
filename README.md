@@ -2,6 +2,10 @@
 
 This is a React-based application for visualizing training logs from JSON files without requiring a server backend.
 
+https://trainviz.goncharov.page/
+
+<img width="1409" height="814" alt="изображение" src="https://github.com/user-attachments/assets/2b931d8a-ac70-4fbc-9201-a1c3d9b00a50" />
+
 ## Installation
 
 ```bash
