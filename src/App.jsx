@@ -108,7 +108,7 @@ export default function App() {
   async function copyChartImage() {
     if (!chartRef.current) return;
     try {
-      const blob = await toBlob(chartRef.current);
+      const blob = await toBlob(chartRef.current, { pixelRatio: 2 });
       await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
       setSnackbar({ open: true, message: 'Chart copied to clipboard', severity: 'success' });
     } catch (err) {
@@ -121,7 +121,7 @@ export default function App() {
   async function exportChartImage() {
     if (!chartRef.current) return;
     try {
-      const dataUrl = await toJpeg(chartRef.current, { quality: 0.95, backgroundColor: '#fff' });
+      const dataUrl = await toJpeg(chartRef.current, { quality: 0.95, backgroundColor: '#fff', pixelRatio: 2 });
       const link = document.createElement('a');
       link.href = dataUrl;
       link.download = 'chart.jpg';
