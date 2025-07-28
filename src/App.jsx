@@ -140,7 +140,7 @@ export default function App() {
           Reset
         </Button>
         <h1>Trainer State Visualizer</h1>
-        <p>Upload your training log JSON and interactively visualize metrics over epochs or steps.</p>
+        <p>Upload your `trainer_state.json` (provided by `Trainer`` from `transformers`) and interactively visualize metrics over epochs or steps.</p>
         <h2>Upload JSON</h2>
         <input type="file" accept="application/json" onChange={handleFile} />
         {error && <p style={{ color: 'red' }}>{error}</p>}
